@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/jaden/static/css/main.6b8197ed.css",
-    "main.js": "/jaden/static/js/main.43367c3a.js",
+    "main.css": "/jaden/static/css/main.f0a19d9e.css",
+    "main.js": "/jaden/static/js/main.64c297bb.js",
     "static/js/787.58da12c7.chunk.js": "/jaden/static/js/787.58da12c7.chunk.js",
     "index.html": "/jaden/index.html",
-    "main.6b8197ed.css.map": "/jaden/static/css/main.6b8197ed.css.map",
-    "main.43367c3a.js.map": "/jaden/static/js/main.43367c3a.js.map",
+    "main.f0a19d9e.css.map": "/jaden/static/css/main.f0a19d9e.css.map",
+    "main.64c297bb.js.map": "/jaden/static/js/main.64c297bb.js.map",
     "787.58da12c7.chunk.js.map": "/jaden/static/js/787.58da12c7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6b8197ed.css",
-    "static/js/main.43367c3a.js"
+    "static/css/main.f0a19d9e.css",
+    "static/js/main.64c297bb.js"
   ]
 }
