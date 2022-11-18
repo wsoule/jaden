@@ -37,6 +37,26 @@
   }
 }
 
-#title {
-  font-size: xx-large;
+.counter {
+  font-size: 1000%;
+  text-align: center;
+}
+
+.clicker {
+  text-align: center;
+}
+
+.parent-div {
+ display: flex;
+/* justify-content: space-between;*/
+}
+
+.child-div {
+
+  margin: 30px;
+  text-align: center;
+  border-style: solid;
+  border-width: 2px;
+  border-color: white;
+  border-radius: 5px 5px 5px 5px;
 }

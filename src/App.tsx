@@ -3,10 +3,11 @@ import './App.css';
 import {
   DataContext,
   getItems,
+  // itemNames,
   ItemsProps,
   setItems as setStoredItems
 } from './data/data';
-import { BuyItem, Clicker } from './items/index';
+import { Clicker, ItemContainer } from './items/index';
 
 function App() : JSX.Element {
   const [items, setStateItems] = useState(getItems());
@@ -14,7 +15,7 @@ function App() : JSX.Element {
     setStateItems(newItems);
     setStoredItems(newItems);
   };
-  const refreshRate = 500;
+  const refreshRate = 100;
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -37,11 +38,21 @@ function App() : JSX.Element {
     };
   }, []);
 
+  // const itemContainerList = itemNames.map((name) => {
+  //   <ItemContainer itemName={name} />;
+  // });
+
   return (
     <DataContext.Provider value={{ items, setItems }}>
       <div className='container'>
         <Clicker />
-        <BuyItem itemName='item1' number={1} />
+        <div className='parent-div'>
+          {/*<ul>{itemContainerList}</ul>*/}
+          <ItemContainer itemName='item1' />
+          <ItemContainer itemName='item2' />
+          <ItemContainer itemName='item3' />
+          <ItemContainer itemName='item4' />
+        </div>
       </div>
     </DataContext.Provider>
   );

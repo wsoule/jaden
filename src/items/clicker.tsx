@@ -17,9 +17,9 @@ export const Clicker: FC = () => {
   };
 
   return (
-    <div>
-      <h1 id='title' style={{ fontSize: 'xx-large' }}>{items.count.amount.toFixed()}</h1>
-      <button onClick={onClick}>Click Here</button>
+    <div className='clicker'>
+      <h1 id='title' className='counter' >{items.count.amount.toFixed()}</h1>
+      <button onClick={onClick} >Click Here</button>
     </div>
   );
 };
