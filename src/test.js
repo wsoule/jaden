@@ -13,22 +13,22 @@ buyButton.setAttribute('id', 'buy-button');
 document.getElementById('main').appendChild(buyButton);
 
 
-let numLoads = parseInt(localStorage.getItem('pageLoads'), 10);
+// let numLoads = parseInt(localStorage.getItem('pageLoads'), 10);
 
 
 
-if (isNaN(numLoads) || numLoads <= 0) { 
-  localStorage.setItem('pageLoads', '1');
-  localStorage.setItem('items', JSON.stringify({
-    count : {amount : 0, perSec : 0},
-    clicks : 0,
-    grandma : {amount : 0, cost : 2, value : 1}
-  }));
+// if (isNaN(numLoads) || numLoads <= 0) {
+//   localStorage.setItem('pageLoads', '1');
+//   localStorage.setItem('items', JSON.stringify({
+//     count : {amount : 0, perSec : 0},
+//     clicks : 0,
+//     grandma : {amount : 0, cost : 2, value : 1}
+//   }));
 	
-}
-else {
-  localStorage.setItem('pageLoads', (numLoads + 1).toString());
-}
+// }
+// else {
+//   localStorage.setItem('pageLoads', (numLoads + 1).toString());
+// }
 
 console.log(JSON.parse(localStorage.getItem('items')).count.amount);
 counter.innerText = JSON.parse(localStorage.getItem('items')).count.amount.toFixed();
@@ -50,13 +50,13 @@ buyButton.addEventListener('click', () => {
   buyButton.innerText = `Buy: $${JSON.parse(localStorage.getItem('items')).grandma.cost}`;
 });
 
-const updateItems = () =>{
-  localStorage.setItem('items', JSON.stringify(items));
-  text = document.getElementById('counter');
-  let val = items.count.amount.toFixed();
-  counter.innerText = val;
-  // console.log(items);
-};
+// const updateItems = () =>{
+//   localStorage.setItem('items', JSON.stringify(items));
+//   text = document.getElementById('counter');
+//   let val = items.count.amount.toFixed();
+//   counter.innerText = val;
+//   // console.log(items);
+// };
 
 const intervalID = setInterval(() => {
   items.count.amount += (items.count.perSec)/200;

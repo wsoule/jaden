@@ -1,46 +1,63 @@
-import { FC, useState } from 'react';
-import { getItems, setItems } from '../data/data';
+import { FC, useContext } from 'react';
+import { DataContext, ItemName, ItemProps } from '../data/data';
 
 export interface BuyItemProps {
-  itemName : 'item1';
+  itemName : ItemName;
   number? : number;
 }
 
 
-export const BuyItem : FC<BuyItemProps> = ({ itemName, number = 1 }) =>{
-  const items = getItems();
+export const BuyItem : FC<BuyItemProps> = ({
+  itemName,
+  number = 1
+}) =>{
+  const { items, setItems } = useContext(DataContext);
+  const item = items[itemName];
+  const canBuy = items.count.amount < item.cost * number;
 
-  if(items.count.amount - items[itemName].cost) {
-    const [itemCost, setItemCost] = useState(items[itemName].cost);
-    const [countAmount, setCountAmount] = useState(items.count.amount);
-    const [itemAmount, setItemAmount] = useState(items[itemName].amount);
-    const [countPerSec, setCountPerSec] = useState(items.count.perSec);
+  const onClick = (): void => {
+    if (canBuy){
+      return;
+    }
 
-    setItemCost(Math.ceil(Math.pow(itemCost, 1.25)));
-    setCountAmount(countAmount - itemCost * number);
-    setItemAmount(itemAmount + number);
-    setCountPerSec(countPerSec + items[itemName].perSec);
+    const newItemCost = Math.ceil(Math.pow(item.cost, 1.25));
+    const newCountAmount = items.count.amount - item.cost * number;
+    const newCountPerSec = items.count.perSec + item.perSec * number;
+    const newItemAmount = item.amount + number;
+    const newItem: ItemProps<ItemName> = {
+      ...item,
+      amount: newItemAmount,
+      cost: newItemCost
+    };
 
-    setItems();
-  }
-  return (
-    <button>Buy {itemName}: ${items[itemName].cost}</button>
-  );
-};
-
-export const Count : FC<CounterProps> = ({ num, objectItem }) => {
-  const [value, setValue] = useState(items[objectItem].amount);
-
-  const increment = () : void => {
-    const newValue = value + num;
-    setValue(newValue);
-    items[objectItem].amount = newValue;
-    localStorage.setItem('items', JSON.stringify(items));
+    setItems({
+      ...items,
+      count: {
+        ...items.count,
+        amount: newCountAmount,
+        perSec: newCountPerSec
+      },
+      [itemName]: newItem
+    });
   };
-
   return (
-    <div>
-      <Button onClickFunction={increment} number={num} />
-    </div>
+    <button disabled={canBuy} onClick={onClick}>Buy {itemName}: ${item.cost}</button>
   );
 };
+
+// export const Count : FC<CounterProps> = ({ num, objectItem }) => {
+//   const [value, setValue] = useState(items[objectItem].amount);
+
+//   const increment = () : void => {
+//     const newValue = value + num;
+//     setValue(newValue);
+//     items[objectItem].amount = newValue;
+//     localStorage.setItem('items', JSON.stringify(items));
+//   };
+
+//   return (
+//     <div>
+//       <Button onClickFunction={increment} number={num} />
+//     </div>
+//   );
+// };
