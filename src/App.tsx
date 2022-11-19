@@ -9,7 +9,10 @@ import {
 } from './data/data';
 import { Clicker, ItemContainer } from './items/index';
 
+alert('hello, i love you');
+
 function App() : JSX.Element {
+
   const [items, setStateItems] = useState(getItems());
   const setItems = (newItems: ItemsProps): void => {
     setStateItems(newItems);
@@ -38,16 +41,12 @@ function App() : JSX.Element {
     };
   }, []);
 
-  // const itemContainerList = itemNames.map((name) => {
-  //   <ItemContainer itemName={name} />;
-  // });
-
   return (
     <DataContext.Provider value={{ items, setItems }}>
       <div className='container'>
         <Clicker />
         <div className='parent-div'>
-          {/*<ul>{itemContainerList}</ul>*/}
+          <ItemContainer itemName='item5' />
           <ItemContainer itemName='item1' />
           <ItemContainer itemName='item2' />
           <ItemContainer itemName='item3' />
