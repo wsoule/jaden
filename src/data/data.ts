@@ -28,18 +28,39 @@ export interface DataContextType {
 }
 
 
+export const item2Messages = [
+  'blah blah blah',
+  'thing 2'
+];
+
+export const item3Messages = [
+  'blah blah blah',
+  'thing 2'
+];
+
+export const item4Messages = [
+  'blah blah blah',
+  'thing 2'
+];
+
+export const item5Messages = [
+  'blah blah blah',
+  'thing 2'
+];
+
 export const item1Messages = [
-  'blah blah blah'
+  'blah blah blah',
+  'thing 2'
 ];
 
 const startingItems: ItemsProps = {
   count: { amount: 0, perSec: 0, perClick: 1},
   clicks: 0,
   item1: { name: 'hug', amount: 0, cost: 5, perSec: 0.2, itemMessages : item1Messages},
-  item2: { name: 'date', amount: 0, cost: 5, perSec: 1 },
-  item3: { name: 'item3', amount: 0, cost: 5, perSec: 10},
-  item4: { name: 'item4', amount: 0, cost: 5, perSec: 20},
-  item5: { name: 'addClick', amount: 0, cost: 5, perSec: 0}
+  item2: { name: 'date', amount: 0, cost: 5, perSec: 1, itemMessages: item2Messages},
+  item3: { name: 'item3', amount: 0, cost: 5, perSec: 10, itemMessages: item3Messages},
+  item4: { name: 'item4', amount: 0, cost: 5, perSec: 20, itemMessages: item4Messages},
+  item5: { name: 'flowers', amount: 0, cost: 5, perSec: 0}
 };
 
 export const getItems = (): ItemsProps => {

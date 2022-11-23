@@ -1,3 +1,4 @@
+import { ChakraProvider } from '@chakra-ui/react';
 import { useEffect, useState } from 'react';
 import './App.css';
 import {
@@ -8,8 +9,10 @@ import {
   setItems as setStoredItems
 } from './data/data';
 import { Clicker, ItemContainer } from './items/index';
+import { theme } from './theme';
 
-alert('hello, i love you');
+// alert('hello, i love you');
+
 
 function App() : JSX.Element {
 
@@ -42,18 +45,20 @@ function App() : JSX.Element {
   }, []);
 
   return (
-    <DataContext.Provider value={{ items, setItems }}>
-      <div className='container'>
-        <Clicker />
-        <div className='parent-div'>
-          <ItemContainer itemName='item5' />
-          <ItemContainer itemName='item1' />
-          <ItemContainer itemName='item2' />
-          <ItemContainer itemName='item3' />
-          <ItemContainer itemName='item4' />
+    <ChakraProvider theme={theme}>
+      <DataContext.Provider value={{ items, setItems }}>
+        <div className='container'>
+          <Clicker />
+          <div className='parent-div'>
+            <ItemContainer itemName='item5' />
+            <ItemContainer itemName='item1' />
+            <ItemContainer itemName='item2' />
+            <ItemContainer itemName='item3' />
+            <ItemContainer itemName='item4' />
+          </div>
         </div>
-      </div>
-    </DataContext.Provider>
+      </DataContext.Provider>
+    </ChakraProvider>
   );
 }
 

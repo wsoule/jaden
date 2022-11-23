@@ -1,5 +1,6 @@
 import { FC, useContext } from 'react';
 import { DataContext } from '../data/data';
+import './clicker.css';
 
 const formatNumber = (number : number): string => {
   if (number >= 1000000000000000){

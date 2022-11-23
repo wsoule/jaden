@@ -4,6 +4,7 @@ import { FC, useContext } from 'react';
 import calcImageUrl from '../img/cALC.jpg';
 import hugImageUrl from '../img/hug.gif';
 import dateImageUrl from '../img/date.gif';
+import './item-container.css';
 // import image2 from '../img/cALC.jpg';
 
 export interface ItemContainerProps {
@@ -36,10 +37,9 @@ export const ItemContainer: FC<ItemContainerProps> = ({ itemName }) => {
     backgroundImage : `url(${getItemImageUrl(itemName)})`,
     backgroundSize : '100% 100%',
     backgroundRepeat : 'no-repeat'
-    // backgroundColor : 'pink'
   };
   const perSecMessage = (item.name === items.item5.name) ?
-    <p className='item-persec'>Add {items.count.perClick + 1} Per Click</p>
+    <p className='item-persec'>+ {items.count.perClick + 1} Per Click</p>
     :
     <p className='item-persec'>Per Sec: {item.perSec}</p>;
 
