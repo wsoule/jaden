@@ -8,6 +8,7 @@ import {
   ItemsProps,
   setItems as setStoredItems
 } from './data/data';
+import { DisplayItems } from './items/display-items';
 import { Clicker, ItemContainer } from './items/index';
 import { theme } from './theme';
 
@@ -50,12 +51,13 @@ function App() : JSX.Element {
         <div className='container'>
           <Clicker />
           <div className='parent-div'>
-            <ItemContainer itemName='item5' />
-            <ItemContainer itemName='item1' />
-            <ItemContainer itemName='item2' />
+            <ItemContainer itemName='flowers' />
+            <ItemContainer itemName='hug' />
+            <ItemContainer itemName='date' />
             <ItemContainer itemName='item3' />
             <ItemContainer itemName='item4' />
           </div>
+          <DisplayItems />
         </div>
       </DataContext.Provider>
     </ChakraProvider>

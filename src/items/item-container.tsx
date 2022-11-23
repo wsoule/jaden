@@ -13,15 +13,15 @@ export interface ItemContainerProps {
 
 export function getItemImageUrl(itemName: ItemName): string | null {
   switch (itemName) {
-    case 'item1':
+    case 'hug':
       return hugImageUrl;
-    case 'item2':
+    case 'date':
       return dateImageUrl;
     case 'item3':
       return null;
     case 'item4':
       return calcImageUrl;
-    case 'item5':
+    case 'flowers':
       return null;
     default: {
       const invalidItemName: never = itemName;
@@ -38,7 +38,7 @@ export const ItemContainer: FC<ItemContainerProps> = ({ itemName }) => {
     backgroundSize : '100% 100%',
     backgroundRepeat : 'no-repeat'
   };
-  const perSecMessage = (item.name === items.item5.name) ?
+  const perSecMessage = (item.name === items.flowers.name) ?
     <p className='item-persec'>+ {items.count.perClick + 1} Per Click</p>
     :
     <p className='item-persec'>Per Sec: {item.perSec}</p>;

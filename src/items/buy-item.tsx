@@ -38,6 +38,7 @@ export const BuyItem : FC<BuyItemProps> = ({
     const newCountAmount = items.count.amount - item.cost * number;
     const newCountPerSec = items.count.perSec + item.perSec * number;
     const newItemAmount = item.amount + number;
+    const newBoughtItems = [...(items.boughtItems ?? []), itemName];
 
     const newItem: ItemProps = {
       ...item,
@@ -47,11 +48,12 @@ export const BuyItem : FC<BuyItemProps> = ({
 
     setItems({
       ...items,
+      boughtItems: newBoughtItems,
       count: {
         ...items.count,
         amount: newCountAmount,
         perSec: newCountPerSec,
-        perClick: (item.name === items.item5.name) ? items.count.perClick + 1 : items.count.perClick
+        perClick: (item.name === items.flowers.name) ? items.count.perClick + 1 : items.count.perClick
       },
       [itemName]: newItem
     });

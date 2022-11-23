@@ -1,0 +1,4 @@
+.items-pics-box {
+     flex-wrap: wrap;
+     display: flex;
+}

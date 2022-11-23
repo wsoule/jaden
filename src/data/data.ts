@@ -1,8 +1,7 @@
 import { createContext } from 'react';
 
-export type ItemName = 'item1' | 'item2' | 'item3' | 'item4' | 'item5';
+export type ItemName = 'hug' | 'date' | 'item3' | 'item4' | 'flowers';
 
-export const itemNames: ItemName[] = ['item1', 'item2', 'item3', 'item4'];
 
 export interface ItemProps {
   name: string;
@@ -13,6 +12,7 @@ export interface ItemProps {
 }
 
 export interface ItemsProps extends Record<ItemName, ItemProps> {
+  boughtItems?: ItemName[];
   count: {amount: number, perSec: number, perClick : number};
   clicks: number;
 }
@@ -54,13 +54,14 @@ export const item1Messages = [
 ];
 
 const startingItems: ItemsProps = {
+  boughtItems: [],
   count: { amount: 0, perSec: 0, perClick: 1},
   clicks: 0,
-  item1: { name: 'hug', amount: 0, cost: 5, perSec: 0.2, itemMessages : item1Messages},
-  item2: { name: 'date', amount: 0, cost: 5, perSec: 1, itemMessages: item2Messages},
+  hug: { name: 'hug', amount: 0, cost: 5, perSec: 0.2, itemMessages : item1Messages},
+  date: { name: 'date', amount: 0, cost: 5, perSec: 1, itemMessages: item2Messages},
   item3: { name: 'item3', amount: 0, cost: 5, perSec: 10, itemMessages: item3Messages},
   item4: { name: 'item4', amount: 0, cost: 5, perSec: 20, itemMessages: item4Messages},
-  item5: { name: 'flowers', amount: 0, cost: 5, perSec: 0}
+  flowers: { name: 'flowers', amount: 0, cost: 5, perSec: 0}
 };
 
 export const getItems = (): ItemsProps => {
