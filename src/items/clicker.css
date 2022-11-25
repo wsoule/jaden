@@ -9,6 +9,17 @@
 
 }
 
+.per-sec {
+  text-align: center;
+  padding: 10px;
+  flex-wrap: flex;
+  margin: 10px 45%;
+  background-color: darkorange;
+  color: #000;
+  font-weight: bolder;
+  border-radius: 50px;
+}
+
 button.click-button {
   padding: 25px;
   font-size: xx-large;
@@ -19,4 +30,14 @@ button.click-button {
 
 button.click-button:hover {
   background-color: #050;
+
+}
+@media  screen and (max-width: 800px) {
+  .counter {
+    font-size: 300%;
+  }
+
+  .per-sec {
+    margin: 10px 10%;
+  }
 }

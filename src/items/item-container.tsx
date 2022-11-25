@@ -23,6 +23,10 @@ export function getItemImageUrl(itemName: ItemName): string | null {
       return calcImageUrl;
     case 'flowers':
       return null;
+    case 'item6':
+      return null;
+    case 'item7':
+      return null;
     default: {
       const invalidItemName: never = itemName;
       throw new Error(`Item name ${invalidItemName} does not have an image.`);

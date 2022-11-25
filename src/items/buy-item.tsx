@@ -2,6 +2,7 @@ import { Button, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, 
 import { FC, useContext, useState } from 'react';
 import { DataContext, ItemName, ItemProps } from '../data/data';
 import './buy-item.css';
+import { formatNumber } from './clicker';
 
 
 export interface BuyItemProps {
@@ -19,6 +20,7 @@ export const BuyItem : FC<BuyItemProps> = ({
   const { items, setItems } = useContext(DataContext);
   const item = items[itemName];
   const canBuy = items.count.amount < item.cost * number;
+  let itemCostString = formatNumber(item.cost);
   const onClose = ():void => {
     setModalMessage(null);
   };
@@ -31,7 +33,7 @@ export const BuyItem : FC<BuyItemProps> = ({
       return;
     }
 
-    if(item.itemMessages?.length){
+    if(item.itemMessages?.length && item.amount%10 == 0){
       setModalMessage(item.itemMessages[Math.floor(Math.random()* (item.itemMessages.length))]);
     }
     const newItemCost = Math.ceil(item.cost * Math.pow(1.15, (item.amount > 0) ? item.amount : 1));
@@ -39,7 +41,7 @@ export const BuyItem : FC<BuyItemProps> = ({
     const newCountPerSec = items.count.perSec + item.perSec * number;
     const newItemAmount = item.amount + number;
     const newBoughtItems = [...(items.boughtItems ?? []), itemName];
-
+    itemCostString = formatNumber(newItemCost);
     const newItem: ItemProps = {
       ...item,
       amount: newItemAmount,
@@ -60,11 +62,11 @@ export const BuyItem : FC<BuyItemProps> = ({
   };
   return (
     <>
-      <Button className='buy-button' colorScheme={'gray'} variant={'solid'} disabled={canBuy} onClick={onClick}>Buy {item.name}: ${item.cost}</Button>
+      <Button className='buy-button' colorScheme={'gray'} variant={'solid'} disabled={canBuy} onClick={onClick}>Buy {item.name}: ${itemCostString}</Button>
       <Modal isOpen={!!modalMessage} onClose={onClose}>
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader>Modal Title</ModalHeader>
+          <ModalHeader>Love Message</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
             <p>{modalMessage}</p>

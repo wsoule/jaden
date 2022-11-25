@@ -1,4 +1,4 @@
-import { ChakraProvider } from '@chakra-ui/react';
+import { Button, ChakraProvider, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay } from '@chakra-ui/react';
 import { useEffect, useState } from 'react';
 import './App.css';
 import {
@@ -16,7 +16,10 @@ import { theme } from './theme';
 
 
 function App() : JSX.Element {
-
+  const [open, setOpen] = useState(true);
+  const onClose = (): void => {
+    setOpen(false);
+  };
   const [items, setStateItems] = useState(getItems());
   const setItems = (newItems: ItemsProps): void => {
     setStateItems(newItems);
@@ -47,6 +50,22 @@ function App() : JSX.Element {
 
   return (
     <ChakraProvider theme={theme}>
+      <Modal isOpen={open} onClose={onClose}>
+        <ModalOverlay />
+        <ModalContent>
+          <ModalHeader>Love Message</ModalHeader>
+          <ModalCloseButton />
+          <ModalBody>
+            <p>{'HAPPY 2 YEAR ANNIVERSARY'}</p>
+            <p>{'I love you very much!'}</p>
+          </ModalBody>
+          <ModalFooter>
+            <Button colorScheme='blue' mr={3} onClick={onClose}>
+                      Close
+            </Button>
+          </ModalFooter>
+        </ModalContent>
+      </Modal>
       <DataContext.Provider value={{ items, setItems }}>
         <div className='container'>
           <Clicker />
@@ -56,6 +75,8 @@ function App() : JSX.Element {
             <ItemContainer itemName='date' />
             <ItemContainer itemName='item3' />
             <ItemContainer itemName='item4' />
+            <ItemContainer itemName='item6' />
+            <ItemContainer itemName='item7' />
           </div>
           <DisplayItems />
         </div>

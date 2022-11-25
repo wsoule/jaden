@@ -1,6 +1,6 @@
 import { createContext } from 'react';
 
-export type ItemName = 'hug' | 'date' | 'item3' | 'item4' | 'flowers';
+export type ItemName = 'hug' | 'date' | 'item3' | 'item4' | 'flowers' | 'item6' | 'item7';
 
 
 export interface ItemProps {
@@ -28,7 +28,7 @@ export interface DataContextType {
 }
 
 
-export const item2Messages = [
+export const dateMessages= [
   'blah blah blah',
   'thing 2'
 ];
@@ -43,25 +43,27 @@ export const item4Messages = [
   'thing 2'
 ];
 
-export const item5Messages = [
+export const flowersMessages = [
   'blah blah blah',
   'thing 2'
 ];
 
-export const item1Messages = [
+export const hugMessages = [
   'blah blah blah',
   'thing 2'
 ];
 
 const startingItems: ItemsProps = {
   boughtItems: [],
-  count: { amount: 0, perSec: 0, perClick: 1},
+  count: { amount: 10000000, perSec: 0, perClick: 1},
   clicks: 0,
-  hug: { name: 'hug', amount: 0, cost: 5, perSec: 0.2, itemMessages : item1Messages},
-  date: { name: 'date', amount: 0, cost: 5, perSec: 1, itemMessages: item2Messages},
+  hug: { name: 'hug', amount: 0, cost: 999999, perSec: 0.2, itemMessages : hugMessages},
+  date: { name: 'date', amount: 0, cost: 5, perSec: 1, itemMessages: dateMessages},
   item3: { name: 'item3', amount: 0, cost: 5, perSec: 10, itemMessages: item3Messages},
   item4: { name: 'item4', amount: 0, cost: 5, perSec: 20, itemMessages: item4Messages},
-  flowers: { name: 'flowers', amount: 0, cost: 5, perSec: 0}
+  flowers: { name: 'flowers', amount: 0, cost: 999999, perSec: 0},
+  item6: { name: 'item6', amount: 0, cost: 10, perSec: 10},
+  item7: { name: 'item7', amount: 0, cost: 0, perSec: 100}
 };
 
 export const getItems = (): ItemsProps => {

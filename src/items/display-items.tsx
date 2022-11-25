@@ -17,6 +17,10 @@ const switchFunc = (item: ItemName): string => {
       return '';
     case 'flowers':
       return flowerImg;
+    case 'item6':
+      return '';
+    case 'item7':
+      return '';
   }
 };
 
@@ -29,7 +33,7 @@ export const DisplayItems: FC = () => {
     <div className='items-pics-box'>
       {  items.boughtItems?.map((item: ItemName) => {
 
-        return <img className='images-in-box' height='20px' width='20px' src={switchFunc(item)} />;
+        return <img className='images-in-box' height='30px' width='30px' src={switchFunc(item)} />;
       })}
     </div>
 
