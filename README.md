@@ -1,6 +1,9 @@
-# Getting Started with Create React App
+# this project is for Jaden
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+this is a cookie clicker game that I created using react, you can view the github pages [here](https://wsoule.github.io/jaden/)
+
+## To run this project locally, clone this repo and apply the scripts bellow
+
 
 ## Available Scripts
 
