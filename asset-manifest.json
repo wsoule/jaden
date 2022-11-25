@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/jaden/static/css/main.4ead96c9.css",
-    "main.js": "/jaden/static/js/main.06bb7d60.js",
+    "main.css": "/jaden/static/css/main.d6db0566.css",
+    "main.js": "/jaden/static/js/main.4e750824.js",
     "static/js/787.58da12c7.chunk.js": "/jaden/static/js/787.58da12c7.chunk.js",
     "static/media/cALC.jpg": "/jaden/static/media/cALC.edb958744a8e87f1e921.jpg",
     "static/media/hug.gif": "/jaden/static/media/hug.e6836df33f77f8243bc5.gif",
@@ -10,12 +10,12 @@
     "static/media/hug.png": "/jaden/static/media/hug.81b6b8354a773e4ab80b.png",
     "static/media/flower.png": "/jaden/static/media/flower.c338a06c77a8f0732480.png",
     "index.html": "/jaden/index.html",
-    "main.4ead96c9.css.map": "/jaden/static/css/main.4ead96c9.css.map",
-    "main.06bb7d60.js.map": "/jaden/static/js/main.06bb7d60.js.map",
+    "main.d6db0566.css.map": "/jaden/static/css/main.d6db0566.css.map",
+    "main.4e750824.js.map": "/jaden/static/js/main.4e750824.js.map",
     "787.58da12c7.chunk.js.map": "/jaden/static/js/787.58da12c7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4ead96c9.css",
-    "static/js/main.06bb7d60.js"
+    "static/css/main.d6db0566.css",
+    "static/js/main.4e750824.js"
   ]
 }
