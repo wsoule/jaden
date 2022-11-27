@@ -12,14 +12,14 @@ const switchFunc = (item: ItemName): string => {
       return hugImg;
     case 'date':
       return dateImg;
-    case 'item3':
-    case 'item4':
+    case 'handHold':
+    case 'dancing':
       return '';
     case 'flowers':
       return flowerImg;
-    case 'item6':
+    case 'makingLove':
       return '';
-    case 'item7':
+    case 'showering':
       return '';
   }
 };
@@ -27,12 +27,9 @@ const switchFunc = (item: ItemName): string => {
 export const DisplayItems: FC = () => {
   const { items } = useContext(DataContext);
 
-
-
   return (
     <div className='items-pics-box'>
       {  items.boughtItems?.map((item: ItemName) => {
-
         return <img className='images-in-box' height='30px' width='30px' src={switchFunc(item)} />;
       })}
     </div>

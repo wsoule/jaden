@@ -62,7 +62,7 @@ export const BuyItem : FC<BuyItemProps> = ({
   };
   return (
     <>
-      <Button className='buy-button' colorScheme={'gray'} variant={'solid'} disabled={canBuy} onClick={onClick}>Buy {item.name}: ${itemCostString}</Button>
+      <Button className='buy-button' colorScheme={'gray'} variant={'solid'} disabled={canBuy} onClick={onClick}>{itemCostString} to {item.name}</Button>
       <Modal isOpen={!!modalMessage} onClose={onClose}>
         <ModalOverlay />
         <ModalContent>

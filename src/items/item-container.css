@@ -1,8 +1,12 @@
 
 .parent-div {
-/* flex-wrap: flex;*/
- align-items: center;
- overflow: auto;
+  flex-wrap: wrap;
+ justify-content: center;
+/* float: left;*/
+/* align-content: stretch;*/
+/* align-items: center;*/
+
+/* overflow: auto;*/
 }
 
 .item-name {
@@ -21,7 +25,7 @@
   border-width: 2px;
   border-color: white;
   border-radius: 10px;
-  width: 300px;
+  width: 225px;
   float: left;
 
 }
@@ -52,14 +56,12 @@
 
 @media  screen and (max-width: 600px) {
   .parent-div {
-    flex-wrap: wrap;
-/*    text-align: center;*/
-/*    align-items: center;*/
+     overflow: auto;
   }
   .child-div {
     width: 100%;
     padding: 0;
     margin: 5px 0;
-/*    margin: 4px 15%;*/
+
   }
 }

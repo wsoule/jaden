@@ -1,6 +1,6 @@
 import { createContext } from 'react';
 
-export type ItemName = 'hug' | 'date' | 'item3' | 'item4' | 'flowers' | 'item6' | 'item7';
+export type ItemName = 'hug' | 'date' | 'handHold' | 'dancing' | 'flowers' | 'makingLove' | 'showering';
 
 
 export interface ItemProps {
@@ -55,15 +55,15 @@ export const hugMessages = [
 
 const startingItems: ItemsProps = {
   boughtItems: [],
-  count: { amount: 10000000, perSec: 0, perClick: 1},
+  count: { amount: 0, perSec: 0, perClick: 1},
   clicks: 0,
-  hug: { name: 'hug', amount: 0, cost: 999999, perSec: 0.2, itemMessages : hugMessages},
-  date: { name: 'date', amount: 0, cost: 5, perSec: 1, itemMessages: dateMessages},
-  item3: { name: 'item3', amount: 0, cost: 5, perSec: 10, itemMessages: item3Messages},
-  item4: { name: 'item4', amount: 0, cost: 5, perSec: 20, itemMessages: item4Messages},
-  flowers: { name: 'flowers', amount: 0, cost: 999999, perSec: 0},
-  item6: { name: 'item6', amount: 0, cost: 10, perSec: 10},
-  item7: { name: 'item7', amount: 0, cost: 0, perSec: 100}
+  flowers: { name: 'give flowers', amount: 0, cost: 10, perSec: 0.2, itemMessages : hugMessages},
+  date: { name: 'go on date', amount: 0, cost: 100, perSec: 1, itemMessages: dateMessages},
+  handHold: { name: 'hold hands', amount: 0, cost: 500, perSec: 10, itemMessages: item3Messages},
+  dancing: { name: 'dance together', amount: 0, cost: 1000, perSec: 20, itemMessages: item4Messages},
+  hug: { name: 'hug', amount: 0, cost: 500, perSec: 0},
+  makingLove: { name: 'make love', amount: 0, cost: 2000, perSec: 50},
+  showering: { name: 'shower together', amount: 0, cost: 50, perSec: 100}
 };
 
 export const getItems = (): ItemsProps => {

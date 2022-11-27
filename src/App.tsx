@@ -12,8 +12,6 @@ import { DisplayItems } from './items/display-items';
 import { Clicker, ItemContainer } from './items/index';
 import { theme } from './theme';
 
-// alert('hello, i love you');
-
 
 function App() : JSX.Element {
   const [open, setOpen] = useState(true);
@@ -70,13 +68,13 @@ function App() : JSX.Element {
         <div className='container'>
           <Clicker />
           <div className='parent-div'>
-            <ItemContainer itemName='flowers' />
             <ItemContainer itemName='hug' />
+            <ItemContainer itemName='flowers' />
             <ItemContainer itemName='date' />
-            <ItemContainer itemName='item3' />
-            <ItemContainer itemName='item4' />
-            <ItemContainer itemName='item6' />
-            <ItemContainer itemName='item7' />
+            <ItemContainer itemName='handHold' />
+            <ItemContainer itemName='dancing' />
+            <ItemContainer itemName='makingLove' />
+            <ItemContainer itemName='showering' />
           </div>
           <DisplayItems />
         </div>
