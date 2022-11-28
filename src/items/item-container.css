@@ -1,38 +1,38 @@
 
 .parent-div {
   flex-wrap: wrap;
- justify-content: center;
- overflow: auto;
-/* float: left;*/
-/* align-content: stretch;*/
-/* align-items: center;*/
-
-/* overflow: auto;*/
+  justify-content: center;
+  display: flex;
+  overflow: auto;
+ align-items: center;
 }
 
 .item-name {
-  padding: 10px 0px;
+  padding: 10px;
   font-size: larger;
   font-weight: bolder;
   background-color: purple;
-  margin: 5px 25%;
+  margin: 5px 0px;
   border-radius: 10px;
+
 }
 
 .child-div {
-  margin: 30px;
+  margin: 30px 2.5%;
   text-align: center;
   border-style: solid;
   border-width: 2px;
   border-color: white;
   border-radius: 10px;
   width: 250px;
-  float: left;
+  flex-wrap: wrap;
+  justify-content: center;
+  display: flex;
 
 }
 
 .item-count {
-  padding: 5px 0px;
+  padding: 5px 5px;
   font-weight: bolder;
   background-color: maroon;
   margin: 5px 25%;
@@ -40,7 +40,7 @@
 }
 
 .item-persec {
-  padding: 5px 0px;
+  padding: 5px 5px;
   text-align: center;
   font-weight: bolder;
   background-color: darkslateblue;
