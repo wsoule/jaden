@@ -1,9 +1,17 @@
 import { BuyItem } from './index';
 import { DataContext, ItemName } from '../data/data';
 import { FC, useContext } from 'react';
-import calcImageUrl from '../img/cALC.jpg';
 import hugImageUrl from '../img/hug.gif';
 import dateImageUrl from '../img/date.gif';
+import makeLoveUrl from '../img/makeLove.gif';
+import showerUrl from '../img/shower.gif';
+import dancingUrl from '../img/dancing.gif';
+import handHoldUrl from '../img/holdHands.gif';
+import flowersUrl from '../img/flowers.gif';
+import childUrl from '../img/child.gif';
+import vacationUrl from '../img/vacation.gif';
+
+
 import './item-container.css';
 // import image2 from '../img/cALC.jpg';
 
@@ -15,18 +23,22 @@ export function getItemImageUrl(itemName: ItemName): string | null {
   switch (itemName) {
     case 'hug':
       return hugImageUrl;
+    case 'flowers':
+      return flowersUrl;
+    case 'handHold':
+      return handHoldUrl;
     case 'date':
       return dateImageUrl;
-    case 'handHold':
-      return null;
     case 'dancing':
-      return calcImageUrl;
-    case 'flowers':
-      return null;
+      return dancingUrl;
+    case 'vacation':
+      return vacationUrl;
     case 'makingLove':
-      return null;
+      return makeLoveUrl;
     case 'showering':
-      return null;
+      return showerUrl;
+    case 'child':
+      return childUrl;
     default: {
       const invalidItemName: never = itemName;
       throw new Error(`Item name ${invalidItemName} does not have an image.`);

@@ -2,6 +2,7 @@
 .parent-div {
   flex-wrap: wrap;
  justify-content: center;
+ overflow: auto;
 /* float: left;*/
 /* align-content: stretch;*/
 /* align-items: center;*/
@@ -25,7 +26,7 @@
   border-width: 2px;
   border-color: white;
   border-radius: 10px;
-  width: 225px;
+  width: 250px;
   float: left;
 
 }

@@ -36,7 +36,7 @@ export const BuyItem : FC<BuyItemProps> = ({
     if(item.itemMessages?.length && item.amount%10 == 0){
       setModalMessage(item.itemMessages[Math.floor(Math.random()* (item.itemMessages.length))]);
     }
-    const newItemCost = Math.ceil(item.cost * Math.pow(1.15, (item.amount > 0) ? item.amount : 1));
+    const newItemCost = Math.ceil(item.baseCost * Math.pow(1.15, (item.amount > 0) ? item.amount : 1));
     const newCountAmount = items.count.amount - item.cost * number;
     const newCountPerSec = items.count.perSec + item.perSec * number;
     const newItemAmount = item.amount + number;
@@ -55,7 +55,7 @@ export const BuyItem : FC<BuyItemProps> = ({
         ...items.count,
         amount: newCountAmount,
         perSec: newCountPerSec,
-        perClick: (item.name === items.flowers.name) ? items.count.perClick + 1 : items.count.perClick
+        perClick: (item.name === items.hug.name) ? items.count.perClick + 1 : items.count.perClick
       },
       [itemName]: newItem
     });

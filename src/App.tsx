@@ -70,11 +70,13 @@ function App() : JSX.Element {
           <div className='parent-div'>
             <ItemContainer itemName='hug' />
             <ItemContainer itemName='flowers' />
-            <ItemContainer itemName='date' />
             <ItemContainer itemName='handHold' />
+            <ItemContainer itemName='date' />
             <ItemContainer itemName='dancing' />
+            <ItemContainer itemName='vacation' />
             <ItemContainer itemName='makingLove' />
             <ItemContainer itemName='showering' />
+            <ItemContainer itemName='child' />
           </div>
           <DisplayItems />
         </div>
