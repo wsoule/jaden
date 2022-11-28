@@ -1,21 +1,33 @@
 {
   "files": {
-    "main.css": "/jaden/static/css/main.4bb96855.css",
-    "main.js": "/jaden/static/js/main.59845ce4.js",
+    "main.css": "/jaden/static/css/main.0bd77018.css",
+    "main.js": "/jaden/static/js/main.551a8e6f.js",
     "static/js/787.58da12c7.chunk.js": "/jaden/static/js/787.58da12c7.chunk.js",
-    "static/media/cALC.jpg": "/jaden/static/media/cALC.edb958744a8e87f1e921.jpg",
+    "static/media/makeLove.gif": "/jaden/static/media/makeLove.14417dd23343adbe4466.gif",
     "static/media/hug.gif": "/jaden/static/media/hug.e6836df33f77f8243bc5.gif",
     "static/media/date.png": "/jaden/static/media/date.5e3af5df56017700e6f2.png",
+    "static/media/vacation.gif": "/jaden/static/media/vacation.f91ce95efa111757cc4d.gif",
+    "static/media/holdHands.gif": "/jaden/static/media/holdHands.174744049b7306705e86.gif",
+    "static/media/shower.gif": "/jaden/static/media/shower.98b3effc9c870f5addd9.gif",
     "static/media/date.gif": "/jaden/static/media/date.f128641fd5e59f855e84.gif",
+    "static/media/shower.png": "/jaden/static/media/shower.71f493bee553c79aef45.png",
+    "static/media/makingLove.png": "/jaden/static/media/makingLove.9ecd225ff8fbf3d538e4.png",
+    "static/media/dancing.gif": "/jaden/static/media/dancing.734b0bee1ed84ee870ef.gif",
+    "static/media/vacation.png": "/jaden/static/media/vacation.f4de415210d418db5b89.png",
+    "static/media/child.png": "/jaden/static/media/child.f70bc21cc7ff7b5d4f5f.png",
     "static/media/hug.png": "/jaden/static/media/hug.81b6b8354a773e4ab80b.png",
     "static/media/flower.png": "/jaden/static/media/flower.c338a06c77a8f0732480.png",
+    "static/media/dance.png": "/jaden/static/media/dance.c59eb325aa19d3254744.png",
+    "static/media/child.gif": "/jaden/static/media/child.798d4db55a943da7c7f1.gif",
+    "static/media/flowers.gif": "/jaden/static/media/flowers.fcd00d1aee08ea8c22bf.gif",
+    "static/media/handHold.png": "/jaden/static/media/handHold.656e5f8d150fb5892a39.png",
     "index.html": "/jaden/index.html",
-    "main.4bb96855.css.map": "/jaden/static/css/main.4bb96855.css.map",
-    "main.59845ce4.js.map": "/jaden/static/js/main.59845ce4.js.map",
+    "main.0bd77018.css.map": "/jaden/static/css/main.0bd77018.css.map",
+    "main.551a8e6f.js.map": "/jaden/static/js/main.551a8e6f.js.map",
     "787.58da12c7.chunk.js.map": "/jaden/static/js/787.58da12c7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4bb96855.css",
-    "static/js/main.59845ce4.js"
+    "static/css/main.0bd77018.css",
+    "static/js/main.551a8e6f.js"
   ]
 }
