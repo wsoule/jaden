@@ -25,15 +25,13 @@ export const BuyItem : FC<BuyItemProps> = ({
     setModalMessage(null);
   };
 
-
-
   const onClick = (): void => {
 
     if (canBuy){
       return;
     }
 
-    if(item.itemMessages?.length && item.amount%10 == 0){
+    if(item.itemMessages?.length && item.amount%10 === 0){
       setModalMessage(item.itemMessages[Math.floor(Math.random()* (item.itemMessages.length))]);
     }
     const newItemCost = Math.ceil(item.baseCost * Math.pow(1.15, (item.amount > 0) ? item.amount : 1));
@@ -66,14 +64,14 @@ export const BuyItem : FC<BuyItemProps> = ({
       <Modal isOpen={!!modalMessage} onClose={onClose}>
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader>Love Message</ModalHeader>
+          <ModalHeader>What I Love About You</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-            <p>{modalMessage}</p>
+            <p>I LOVE {modalMessage?.toUpperCase()}</p>
           </ModalBody>
           <ModalFooter>
             <Button colorScheme='blue' mr={3} onClick={onClose}>
-                      Close
+              Close
             </Button>
           </ModalFooter>
         </ModalContent>

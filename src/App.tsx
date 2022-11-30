@@ -4,12 +4,10 @@ import './App.css';
 import {
   DataContext,
   getItems,
-  // itemNames,
   ItemsProps,
   setItems as setStoredItems
 } from './data/data';
-import { DisplayItems } from './items/display-items';
-import { Clicker, ItemContainer } from './items/index';
+import { Clicker, DisplayItems, ItemContainer } from './items/index';
 import { theme } from './theme';
 
 

@@ -1,5 +1,6 @@
 
 .parent-div {
+
   flex-wrap: wrap;
   justify-content: center;
   display: flex;
@@ -8,16 +9,19 @@
 }
 
 .item-name {
-  padding: 10px;
+  font-family: 'Apple Chancery';
+  padding: 5px;
+  text-align: center;
   font-size: larger;
   font-weight: bolder;
   background-color: purple;
-  margin: 5px 0px;
+  margin: 5px 15%;
   border-radius: 10px;
 
 }
 
 .child-div {
+  font-family: 'Baskerville';
   margin: 30px 2.5%;
   text-align: center;
   border-style: solid;
@@ -25,13 +29,14 @@
   border-color: white;
   border-radius: 10px;
   width: 250px;
-  flex-wrap: wrap;
+/*  flex-wrap: wrap;
   justify-content: center;
-  display: flex;
+  display: flex;*/
 
 }
 
 .item-count {
+  font-family: 'Baskerville';
   padding: 5px 5px;
   font-weight: bolder;
   background-color: maroon;
@@ -40,6 +45,7 @@
 }
 
 .item-persec {
+  font-family: 'Baskerville';
   padding: 5px 5px;
   text-align: center;
   font-weight: bolder;

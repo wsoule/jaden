@@ -55,9 +55,9 @@ export const ItemContainer: FC<ItemContainerProps> = ({ itemName }) => {
     backgroundRepeat : 'no-repeat'
   };
   const perSecMessage = (item.name === items.hug.name) ?
-    <p className='item-persec'>+ {items.count.perClick + 1} Per Click</p>
+    <p className='item-persec'>+ {items.count.perClick + 1} per click</p>
     :
-    <p className='item-persec'>Per Sec: {item.perSec}</p>;
+    <p className='item-persec'>per sec: {item.perSec}</p>;
 
   return (
     <div className='child-div' style={media} >

@@ -1,12 +1,13 @@
 .counter {
+  font-family: 'Apple Chancery';
   margin: 50px ;
   font-size: 500%;
   text-align: center;
 }
 
 .clicker {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   text-align: center;
-
 }
 
 .per-sec {
