@@ -43,7 +43,7 @@ export const BuyItem : FC<BuyItemProps> = ({
     const newItem: ItemProps = {
       ...item,
       amount: newItemAmount,
-      cost: newItemCost
+      cost: (item.name === items.hug.name) ? item.cost * 2 : newItemCost
     };
 
     setItems({
