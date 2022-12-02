@@ -64,7 +64,7 @@ const startingItems: ItemsProps = {
   clicks: 0,
   hug: { name: 'hug', amount: 0, baseCost: 500, cost: 500, perSec: 0, itemMessages: loveMessages},
   flowers: { name: 'give flowers', amount: 0, baseCost: 30, cost: 30, perSec: 0.2, itemMessages: loveMessages},
-  handHold: { name: 'hold hands', amount: 0, baseCost: 100, cost: 100, perSec: 10, itemMessages: loveMessages},
+  handHold: { name: 'hold hands', amount: 0, baseCost: 100, cost: 100, perSec: 1, itemMessages: loveMessages},
   date: { name: 'go on date', amount: 0, baseCost: 750, cost: 750, perSec: 5, itemMessages: loveMessages},
   dancing: { name: 'dance together', amount: 0, baseCost: 5000, cost: 5000, perSec: 69, itemMessages: loveMessages},
   vacation: { name: 'go on vacation', amount: 0, baseCost: 60000, cost: 60000, perSec: 180, itemMessages: loveMessages},
